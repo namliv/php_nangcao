@@ -11,7 +11,7 @@ if($id == null){
 //ktra id co ton tai trong csdl hay ko
 require_once 'db.php';
 
-$sql = "SELECT * FROM user where id = $id";
+$sql = "SELECT * FROM users where id = $id";
 
 $stmt = $conn->prepare($sql);
 $stmt->execute();

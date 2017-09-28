@@ -1,8 +1,4 @@
 <?php 
-$servername = 'localhost';
-$dbname = 'php_1702';
-$dbusername = 'root';
-$dbpwd = '';
 
 require_once 'db.php';
 

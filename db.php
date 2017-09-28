@@ -1,5 +1,8 @@
 <?php 
-
+$servername = 'localhost';
+$dbname = 'php_1702';
+$dbusername = 'root';
+$dbpwd = '';
      //tao ket noi csdl
 try {
 	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpwd);
