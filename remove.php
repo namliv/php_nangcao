@@ -16,7 +16,17 @@ $sql = "SELECT * FROM users where id = $id";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $user = $stmt->fetch();
-var_dump($user);
+if($user == false){
+	echo "<h1>Nguoi dung ko ton tai</h1><a href='index.php'>Tro Ve Trang Chu</a>";
+	die;
+}
+
+$sql = "delete from users where id = :id";
+$stmt = $conn->prepare($sql);
+$stmt->bindValue(':id' , $id);
+$stmt->execute();
+
+header('location:index.php');
 
 
 

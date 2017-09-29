@@ -15,6 +15,7 @@ $result = $stmt->fetchAll();
 			<th>ID</th>
 			<th>EMAIL</th>
 			<th>NAME</th>
+			<th>Avatar</th>
 			<th>
 				<a href="create.php">Add User</a>
 			</th>
@@ -26,6 +27,7 @@ $result = $stmt->fetchAll();
 			<td><?= $user['id']  ?></td>
 			<td><?= $user['name']  ?></td>
 			<td><?= $user['email']  ?></td>
+			<td><img src="<?= $user['avatar']  ?>" width="100"></td>
 			<td>
 				<a href="edit.php?id=<?= $user['id']?>">Edit</a>
 				<a href="remove.php?id=<?= $user['id']?>">Remove</a>
